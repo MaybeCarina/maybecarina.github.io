@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", function() {
             navLinks.forEach(link => {
                 const linkPath = link.getAttribute('href').replace(/^\//, ""); // Remove leading slash from href
 
-                if (linkPath === currentPath) {
-                    link.style.display = 'none'; 
+                if (linkPath == currentPath) {
+                    link.classList.add('active');
                 }
             });
 

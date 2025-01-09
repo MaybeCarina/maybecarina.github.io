@@ -60,6 +60,13 @@ header {
     text-align: center;
 }
 
+.nav-links a.active {
+    font-weight: bold;
+    background-color: rgb(169, 113, 120);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
 .nav-links a:hover {
     text-decoration: underline;
 }
