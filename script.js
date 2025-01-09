@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
             navLinks.forEach(link => {
                 if (link.getAttribute('href') === currentPath) {
-                link.parentElement.classList.add('active'); 
+                    link.parentElement.classList.add('active'); 
                 }
             });
-            
+
             document.querySelector('.hamburger').addEventListener('click', () => {
                 document.querySelector('.nav-links').classList.toggle('active');
             });
