@@ -5,13 +5,15 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
             document.querySelector('body').insertAdjacentHTML('afterbegin', data);
 
-            const currentPath = window.location.pathname; 
+            const currentPath = window.location.pathname.replace(/^\//, ""); // Remove leading slash
 
             const navLinks = document.querySelectorAll('.nav-links a');
 
             navLinks.forEach(link => {
-                if (link.getAttribute('href') === currentPath) {
-                    link.parentElement.classList.add('active'); 
+                const linkPath = link.getAttribute('href').replace(/^\//, ""); // Remove leading slash from href
+
+                if (linkPath === currentPath) {
+                    link.style.display = 'none'; 
                 }
             });
 
