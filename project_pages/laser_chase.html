@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laser Chase</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <main class="container"> 
+        <div class="content">
+            <h1>Laser Chase Cat Toy</h1>
+            <div class="box">
+                <img src="../images/laser_chase.jpg" alt="Laser Chase cat toy" style="float: center; margin: 10px; width: 50%; height: auto;">
+            </div>
+            <p>This project is an interactive, embedded laser pointer toy for cats. The goal of this project was to create a device that could entertain my cat when I am unable to play with him. Thus, Laser Chase was created.</p>
+           
+            <div class="box">
+                <img src="../images/lc_diagram.jpg" alt="Laser Chase Controls Diagram" style="float: center; margin: 10px; width: 70%; height: auto;">
+            </div>
+            
+            <p>This toy features two modes: an interactive mode, where users can control the laser pointer using a joystick, and an automatic mode, which moves the laser around autonomously. The automatic mode is equipped with computer vision technology to detect the cat's location and move the laser away from them.</p>
+            <p>To develop this device, I used an Arduino Mega to process inputs from the power button, mode button, and joystick. The Arduino controls the laser pointer and the pan-tilt mount.</p>
+            <p>A Raspberry Pi 4 was used for the computer vision component. This feature employs the YOLOv8 model for object detection and sends the cat's location to the Arduino via a serial connection.
+            </p>
+            <div style="overflow: hidden;">
+                <img src="../images/lc_box.jpg" alt="Laser Chase cat toy" style="float: left; margin: 10px; width: 40%; height: auto;">
+                <img src="../images/lc_lid.jpg" alt="Laser Chase cat toy" style="float: right; margin: 10px; width: 40%; height: auto;">
+            </div>
+            <p>The case for this project was custom-designed and 3D-printed using CAD software. Additionally, some parts were laser-cut using custom vector images. Designing the parts involved an iterative process as sometimes the designs would not work with the parts I was using. 
+            </p>
+            <div style="overflow: hidden;">
+                <img src="../images/controls_1.jpg" alt="Laser Chase cat toy" style="float: left; margin: 10px; width: 45%; height: auto;">
+                <img src="../images/controls_2.jpg" alt="Laser Chase cat toy" style="float: right; margin: 10px; width: 40%; height: auto;">
+            </div>
+            <a href="https://youtube.com/shorts/Zxt-md_PJHM">View a brief demo of the project here.</a>
+        </div>    
+    </main>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <main class="container"> 
+        <div class="content">
+            <h1>Detecting Breast Cancer Using Machine Learninig</h1>
+            <p> Breast cancer is a malignant tumor that develops in breast cells. It is one of the most common types of cancer; however, many traditional diagnostic methods result in misdiagnosis. The goal of this project was to train a machine learning model capable of accurately identifying breast cancer in x-ray mammogram images, potentially serving as a tool to aid healthcare providers in the diagnostic process. To achieve this, my team and I first identified a suitable dataset. To create a more uniform dataset and improve model performance, we applied data pre-processing techniques. These included contrast-limited adaptive histogram equalization (CLAHE), filtering, data augmentation, and feature selection and reduction.  
+            </p>
+            <p>For the models, we implemented a convolutional neural network (CNN), a support vector machine (SVM), and a vision transformer (ViT) model. One of the biggest challenges we faced was overfitting. We had to be cautious when evaluating our models’ results, as metrics often appeared exceptional, but testing and training loss revealed inconsistencies.  
+            </p>
+            <p>The CNN was an obvious choice for this project due to its strength in identifying patterns and extracting details. CNNs have proven successful in classifying various medical images. For our application, we used the pre-trained EfficientNet-B1. Utilizing a pre-trained model allowed us to take advantage of its initial weights, which encoded valuable knowledge and patterns. Through extensive experimentation and adjustments—particularly to the learning rate—we achieved a good balance for our complex dataset. The CNN performed the best among all models, achieving an accuracy of approximately 77%.  
+            </p>
+            <p>An SVM was chosen because it is well-suited for smaller datasets with a large number of features. This model allowed us to focus on tuning hyperparameters and experimenting with different kernels, given its faster training time. We tested multiple kernels, including a linear kernel for simple boundaries, a polynomial kernel for complex relationships, and a radial basis function (RBF) kernel to handle non-linear patterns. The RBF kernel performed the best, achieving an accuracy of 71%.  
+            </p>
+            <p>The ViT model is a more recent architecture adapted for computer vision applications. Based on our research, it demonstrated performance comparable to CNNs and offered advantages such as lower computational power requirements. We used a large pre-trained ViT model (ViT_L_16), which has a higher number of parameters and computational complexity. This architecture processes images by dividing them into 16x16 patches, which are then fed into the transformer. The ViT model faced significant issues with plateauing, which we mitigated by applying dynamic weights, using a learning rate scheduler, and refining our data pre-processing techniques. This model achieved the second-best accuracy at 73%.  
+            </p>
+            <p>In the end, our models achieved an average accuracy of at least 70%, with peak accuracies nearing 80%. This project serves as a promising starting point for a tool that could later be integrated into the medical field. However, increasing model accuracy is essential to reduce the likelihood of false positives and false negatives.  
+            </p>
+        </div>
+    </main>
+    <script src="../script.js"></script>
+</body>
+</html>

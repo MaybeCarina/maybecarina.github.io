@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Fetch and insert the navbar
-    fetch('navbar.html')
+    fetch('/navbar.html')
         .then(response => response.text())
         .then(data => {
             document.querySelector('body').insertAdjacentHTML('afterbegin', data);

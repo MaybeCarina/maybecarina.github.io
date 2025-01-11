@@ -9,7 +9,7 @@ body {
     background-image: url("backgrounds/green-tropical-leaves-patterned-background.jpg");
     background-size: cover;
     background-position: center center;
-    min-height: 100vh;
+    min-height: 90vh;
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -22,7 +22,7 @@ body {
     text-align: center;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     color: rgb(32, 46, 32);
-    font-size: 2.3vw;
+    font-size: clamp(1rem, 2vw, 3rem);
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -30,7 +30,19 @@ body {
 }
 
 .container .box {
-    flex: 1;
+    display: flex; /* Use flexbox for the box */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.container .box img {
+    max-height: 80vh;
+    height: auto;
+    max-width: 100%;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
 }
 
 header {

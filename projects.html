@@ -9,90 +9,17 @@
     <main class="container"> 
         <div class="content">
             <h1>My Projects</h1>
-            <div class="project">
-                <h2>Breast Cancer Detection</h2>
-                <p>
-                    Implemented a convolutional neural network (CNN), a support vector machine (SVM), and a vision transformer
-                    (ViT) model to detect breast cancer in mammogram x-ray images.
-                    Applied data pre-processing techniques to improve model accuracy, achieving an average accuracy of at least 70%
-                    and peak accuracies exceeding 80%.
-                </p>
-            </div>
-            <div class="project">
-                <h2>Laser Chase</h2>
-                <div class="box">
-                    <img src="images/laser_chase.jpg" alt="Laser Chase cat toy" style="float: left; margin: 10px; width: 50%; height: auto;">
-                </div>
-                <p>
-                    Developed an interactive, embedded laser pointer toy for cats using Arduino and Raspberry Pi, featuring
-                    YOLOv8-based Python object detection to autonomously track and engage with pets.
-                    Designed and 3D-printed a custom enclosure with both automated and manual control modes, allowing
-                    user-operated precision via joystick, enhancing product usability and functionality.
-                </p>
-            </div>
-            <div class="project">
-                <h2>IoT Dashboard</h2>
-                <p>
-                    Streamlined live data including equipment metrics, social media engagement, queue tracking, entry/exit, and more
-                    to display on custom analytics dashboard.
-                    Developed using JavaScript, Python, React, and Git, with project management through Asana.
-                </p>
-            </div>
-            <div class="project">
-                <h2>Motor Controller Peripheral</h2>
-                <p>
-                    Created an SCOMP peripheral that has the ability to control at least four
-                    servo motors at once. Could handle pulse width ranges from 0.6 to 2.4ms. 
-                    While an SCOMP programmer can send a 16 bit value as input to our peripheral, we decided to configure only bits 11-0 for simplicity, as the operand is 
-                    11 bits. Thus, we designated four different addresses for each servo motor. Peripheral
-                    allowed users to customize desired pulse width range and velocity settings.
-                    Our plan was to make a flexible servo motor control peripheral that can support a variety of user projects. 
+            <ul class="project-links">
+                <li><a href="project_pages/cancer_ml.html">Detecting Breast Cancer Using Machine Learninig</a></li>
+                <li><a href="project_pages/laser_chase.html">Laser Chase Cat Toy</a></li>
+                <li><a href="project_pages/iot_dash.html">IoT Dashboard</a></li>
+                <li><a href="project_pages/peripheral.html">Motor Controller Peripheral</a></li>
+                <li><a href="project_pages/ninelives.html">NineLives</a></li>
+                <li><a href="project_pages/dungeon_crawler.html">Dungeon Crawler Mobile Game</a></li>
+                <li><a href="project_pages/dirt.html">Drone Infrastructure Research Technology (D.I.R.T.)</a></li>
+                <li><a href="project_pages/website.html">Personal Portfolio Website</a></li>
+            </ul>
 
-                </p>
-            </div>
-            <div class="project">
-                <h2>NineLives</h2>
-                <div class="box">
-                    <img src="images/ninelives.jpg" alt="Nine Lives Demo Day" style="float: left; margin: 10px; width: 50%; height: auto;">
-                </div>
-                <p>
-                    Created at HackGT23, this project is a Java based game where players
-                    can expereince the life of cats. Featuring an engaging story along with 
-                    challenging mini games. The project was created in less than 36 hours,
-                    which required me to learn new skills in a limited time period. The Java LibGDX
-                    library was used to create the game.
-                </p>
-            </div>
-            <div class="project">
-                <h2>Dungeon Crawler Mobile Game</h2>
-                <p>
-                    Operated within an Agile-based scrum development framework to develop a 2D dungeon crawler style mobile game
-                    implementing a user-friendly interface and utilizing object-oriented programming principles to create modular and
-                    maintainable codebase.
-                    Programmed in Java using Android Studio, managed project workflow with Trello and Git version control.
-                </p>
-            </div>
-            <div class="project">
-                <h2>Drone Infrastructure Research Project</h2>
-                <div class="box">
-                    <img src="images/dirt.jpg" alt="DIRT Dashboard" style="float: left; margin: 10px; width: 50%; height: auto;">
-                </div>
-                <p>
-                    Leveraged MQTT (via RabbitMQ) to upload location and metadata post-classification to Adafruit IO, populating
-                    the frontend dashboard created using Python-based web framework.
-                    Implemented using Python, Bootstrap, Dash, Edge Impulse, and an Openmv H7 Camera. 
-                </p>
-                <a href="https://devpost.com/software/drone-infrastructure-research-technology"> Click here to view project Devpost</a>
-            </div>
-            <div class="project">
-                <h2>Personal Portfolio Website</h2>
-                <p>
-                    This website is another project of mine. My intention in creating it is to not only
-                    have a place where anyone can get all the important information 
-                    about me, but also it is something I decided to do to brush up on my 
-                    dusty HTML/CSS web development skills.
-                </p>
-            </div>
         </div>
     </main>
     <script src="script.js"></script>
