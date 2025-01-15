@@ -213,4 +213,12 @@ header {
     .hamburger {
         display: flex;
     }
+
+}
+
+@media (max-width: 500px) {
+    .project-links li {
+        width: 200px;
+        text-align: center;
+    }
 }
