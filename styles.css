@@ -4,14 +4,29 @@ body, ul, li {
     list-style: none;
 }
 
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem); /* 32px-48px */
+}
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem); /* 24px-40px */
+}
+h3 {
+    font-size: clamp(1.25rem, 3vw, 2rem); /* 20px-32px */
+}
+h4, h5, h6 {
+    font-size: clamp(1rem, 2vw, 1.5rem); /* 16px-24px */
+}
+
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin: 0;
     background-image: url("backgrounds/green-tropical-leaves-patterned-background.jpg");
     background-size: cover;
     background-position: center center;
-    min-height: 90vh;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh; 
     padding: 20px;
 }
 
@@ -24,15 +39,17 @@ body {
     color: rgb(32, 46, 32);
     font-size: clamp(1rem, 2vw, 3rem);
     box-sizing: border-box;
+    max-width: 800px; 
+    width: 100%; 
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 20px;
 }
 
 .container .box {
-    display: flex; /* Use flexbox for the box */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
 }
 
 .container .box img {
@@ -49,19 +66,76 @@ header {
     position: sticky;
     top: 0;
     z-index: 1;
-    padding:10px 20px;
+    padding: 10px 20px;
     border-radius: 30px;
     background-color: rgb(54, 68, 60);
     color: white;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .contact-links {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: auto;
-    gap: 20px;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 15px
+}
+
+.project-links li {
+    width: 500px;
+    text-align: center;
+}
+
+.project-links a {
+    display: block; 
+    text-decoration: none;
+    color: #fff;
+    background-color: #6c4c4f; 
+    padding: 15px; 
+    border-radius: 8px; 
+    font-size: 16px; 
+    transition: all 0.3s ease; 
+    position: relative; 
+}
+
+.project-links a:hover {
+    background-color: #825b5f;
+    color: #e9ecef;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.project-links a::after {
+    content: attr(data-tooltip); 
+    position: absolute;
+    bottom: 120%; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #746b6b;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    white-space: nowrap; 
+    font-size: 14px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    pointer-events: none; 
+}
+
+.project-links a:hover::after {
+    opacity: 1;
+    visibility: visible;
 }
 
 .navbar {
